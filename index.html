@@ -191,13 +191,19 @@
         </div>
         
         <footer>
-            <p>Database Management System Practicals &copy; 2025</p>
+            <p>All rights revered by pratik raktate &copy; 2025</p>
         </footer>
     </div>
 
     <script>
         // Practical data
         const practicals = [
+            {
+                title: "DBMS softwares",
+                desc: "All software required to execute TE SPPU DBMS practicals like MySQL command line tool, MySQl workbench, Oracle 21c XE (SQL plus), mongosh shell, mongoDB compass",
+                url: "https://humble-quesadilla-7b1.notion.site/ALL-Softwares-278b95436b42801b90f7c4ffee32a834",
+                icon: "🖥️"
+            },
             {
                 title: "SQl-1",
                 desc: "Design and Develop SQL DDL statements which demonstrate the use of SQL such as Table, View, Index, Sequence, Synonym",
@@ -217,7 +223,7 @@
                 icon: "🔍"
             },
             {
-                title: "SQL-4",
+                title: "PL/SQL-1",
                 desc: "Write a PL/SQL code block to calculate the area of a circle for a value of radius varying from 5 to 9. Store the radius and the corresponding values of calculated area in an empty table named areas,consisting of two columns,radius and area.",
                 url: "https://humble-quesadilla-7b1.notion.site/PL-SQL-1-278b95436b428043a303e188799117c5",
                 icon: "📈"
@@ -288,7 +294,7 @@
             cardLink.innerHTML = `
                 <div>
                     <h3 class="card-title">
-                        <span class="card-number">${index + 1}</span>
+                        <span class="card-number">${index}</span>
                         <span class="card-icon">${practical.icon}</span>
                         ${practical.title}
                     </h3>
