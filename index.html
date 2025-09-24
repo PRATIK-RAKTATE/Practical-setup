@@ -1,1 +1,317 @@
-updating soon 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Practicals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .practicals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .practical-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 180px;
+            animation: cardSlideUp 0.5s ease-out;
+            animation-fill-mode: both;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .practical-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .practical-card:active {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card-icon {
+            margin-right: 10px;
+            font-size: 1.6rem;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .card-number {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes cardSlideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .practicals-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .practical-card {
+                height: 160px;
+                padding: 20px;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .practical-card {
+                height: 150px;
+                padding: 15px;
+            }
+            
+            .card-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DBMS Practicals</h1>
+            <p class="subtitle">Click on any practical to view its details and implementation</p>
+        </header>
+        
+        <div class="practicals-grid" id="practicalsContainer">
+            <!-- Practical cards will be generated by JavaScript -->
+        </div>
+        
+        <footer>
+            <p>Database Management System Practicals &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Practical data
+        const practicals = [
+            {
+                title: "SQl-1",
+                desc: "Design and Develop SQL DDL statements which demonstrate the use of SQL such as Table, View, Index, Sequence, Synonym",
+                url: "https://humble-quesadilla-7b1.notion.site/SQL-1-278b95436b42804fb165df65c8c77afb",
+                icon: "📊"
+            },
+            {
+                title: "SQL-2",
+                desc: " Design at least 10 SQL queries for selected real time application using SQL DML statements: Insert, select, Update,	Delete	with operators, functions	and	set    operator.",
+                url: "https://humble-quesadilla-7b1.notion.site/SQL-2-278b95436b42805db417ca6d3f793b61",
+                icon: "🗃️"
+            },
+            {
+                title: "SQL-3",
+                desc: "Design at least 10 SQL queries for  selected real time application database using SQL DML statements for all types of Join, Sub-Query and View.",
+                url: "https://humble-quesadilla-7b1.notion.site/SQL-3-278b95436b42801d9d3fdff56cb08cda",
+                icon: "🔍"
+            },
+            // {
+            //     title: "SQL-4",
+            //     desc: "Write a SQL query to solve the given problem statements using appropriate SQL clauses and operators",
+            //     url: "#",
+            //     icon: "📈"
+            // },
+            // {
+            //     title: "SQL-5",
+            //     desc: "Write a SQL query to solve the given problem statements using Joins and Set Operations",
+            //     url: "#",
+            //     icon: "👁️"
+            // },
+            // {
+            //     title: "SQL-6",
+            //     desc: "Write a SQL query to solve the given problem statements using Subqueries",
+            //     url: "#",
+            //     icon: "⚙️"
+            // },
+            // {
+            //     title: "SQL-7",
+            //     desc: "Write a SQL query to solve the given problem statements using Group functions",
+            //     url: "#",
+            //     icon: "🔄"
+            // },
+            // {
+            //     title: "SQL-8",
+            //     desc: "Creation of Views for a given database and demonstrate operations on them",
+            //     url: "#",
+            //     icon: "💳"
+            // },
+            // {
+            //     title: "SQL-9",
+            //     desc: "Write a PL/SQL program that includes the following features: Cursors, Procedures, Functions, Triggers",
+            //     url: "#",
+            //     icon: "🔒"
+            // },
+            // {
+            //     title: "SQL-10",
+            //     desc: "Write a PL/SQL program that includes the following features: Packages, Exception Handling",
+            //     url: "#",
+            //     icon: "📐"
+            // },
+            // {
+            //     title: "Mini Project",
+            //     desc: "Design and implement a database project for a real-world application",
+            //     url: "#",
+            //     icon: "💾"
+            // },
+            // {
+            //     title: "Case Study",
+            //     desc: "Analyze and optimize an existing database system",
+            //     url: "#",
+            //     icon: "🚀"
+            // }
+        ];
+
+        // Generate practical cards
+        const container = document.getElementById('practicalsContainer');
+        
+        practicals.forEach((practical, index) => {
+            // Create anchor tag instead of div for direct linking
+            const cardLink = document.createElement('a');
+            cardLink.className = 'practical-card';
+            cardLink.href = practical.url;
+            cardLink.target = "_blank"; // Opens in new tab
+            cardLink.style.animationDelay = `${index * 0.1}s`;
+            cardLink.style.textDecoration = 'none';
+            cardLink.style.color = 'inherit';
+            
+            cardLink.innerHTML = `
+                <div>
+                    <h3 class="card-title">
+                        <span class="card-number">${index + 1}</span>
+                        <span class="card-icon">${practical.icon}</span>
+                        ${practical.title}
+                    </h3>
+                    <p class="card-desc">${practical.desc}</p>
+                </div>
+            `;
+            
+            // Add click animation
+            cardLink.addEventListener('click', (e) => {
+                // For links that are "#", prevent default behavior
+                if (practical.url === "#") {
+                    e.preventDefault();
+                }
+                
+                // Add click animation
+                cardLink.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    cardLink.style.transform = '';
+                }, 300);
+            });
+            
+            container.appendChild(cardLink);
+        });
+    </script>
+</body>
+</html>
