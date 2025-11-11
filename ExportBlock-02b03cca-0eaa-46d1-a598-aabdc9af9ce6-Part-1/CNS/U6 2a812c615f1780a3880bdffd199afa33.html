@@ -1,0 +1,707 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>U6</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2a812c61-5f17-80a3-880b-dffd199afa33" class="page sans"><header><h1 class="page-title">U6</h1><p class="page-description"></p></header><div class="page-body"><p id="2a812c61-5f17-807e-a8c6-c5c69c9f2d90" class="">
+</p><p id="2a812c61-5f17-809d-87f4-e676d7cb729f" class="">Excellent 👏 — this part belongs to <strong>Network Security</strong>, one of the most asked and scoring sections in oral exams.</p><p id="2a812c61-5f17-80ed-b1a7-f4fda1c76dc0" class="">Here’s a <strong>clear, pointwise, in-depth yet simple oral-ready explanation</strong> for every topic you listed — industry-correct and easy to remember.</p><hr id="2a812c61-5f17-8074-858b-de83b5f5b511"/><h2 id="2a812c61-5f17-80c1-b17a-f7fc78597ccf" class="">🔐 <strong>Computer Networks — Network Security (Oral Notes)</strong></h2><hr id="2a812c61-5f17-807b-bbf2-d9bfb425c8ca"/><h3 id="2a812c61-5f17-80f8-83c8-cb1c2ec6c8ce" class=""><strong>1. What is Network Security</strong></h3><ul id="2a812c61-5f17-8089-b31c-cc091fdaf55c" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition:</strong><p id="2a812c61-5f17-8045-a386-fc2cd3ea7620" class="">Protection of computer networks and data from <strong>unauthorized access, misuse, modification, or denial of service</strong>.</p></li></ul><ul id="2a812c61-5f17-809a-acb0-eed1c2a82105" class="bulleted-list"><li style="list-style-type:disc"><strong>Goal:</strong> Ensure <strong>Confidentiality, Integrity, and Availability</strong> (the <strong>CIA triad</strong>).</li></ul><ul id="2a812c61-5f17-8043-abe9-db942115e9a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> Using firewalls, encryption, and secure protocols to protect data transfer.</li></ul><hr id="2a812c61-5f17-8027-8a86-d344a650d43c"/><h3 id="2a812c61-5f17-8082-be5d-fc2c8ffb72d1" class=""><strong>2. Key Principles of Security (CIA + A + N)</strong></h3><ol type="1" id="2a812c61-5f17-8094-a856-e844be89f250" class="numbered-list" start="1"><li><strong>Confidentiality:</strong><p id="2a812c61-5f17-80ad-bf15-eebb543b2298" class="">Only authorized users can access data.</p><p id="2a812c61-5f17-8027-a752-dd4707925ac6" class="">→ Example: Data encryption.</p></li></ol><ol type="1" id="2a812c61-5f17-80b6-984f-e197bc44a8b0" class="numbered-list" start="2"><li><strong>Integrity:</strong><p id="2a812c61-5f17-8058-a02a-cd14e7fb8134" class="">Data cannot be modified or tampered with.</p><p id="2a812c61-5f17-80cc-b2b4-c690e4f48422" class="">→ Example: Hashing.</p></li></ol><ol type="1" id="2a812c61-5f17-8077-bba8-f6114b345af6" class="numbered-list" start="3"><li><strong>Availability:</strong><p id="2a812c61-5f17-8050-a1a8-f828ad5fb89a" class="">Data and services are accessible when needed.</p><p id="2a812c61-5f17-80fb-8241-df72f4e199b0" class="">→ Example: Redundant servers.</p></li></ol><ol type="1" id="2a812c61-5f17-8065-93da-ced52a03da1e" class="numbered-list" start="4"><li><strong>Authentication:</strong><p id="2a812c61-5f17-80dd-bf88-e5f869ceaef9" class="">Verifying user identity.</p><p id="2a812c61-5f17-8001-bbd8-c8ce95254246" class="">→ Example: Login password or biometric.</p></li></ol><ol type="1" id="2a812c61-5f17-8068-a37a-e94cc9974429" class="numbered-list" start="5"><li><strong>Non-repudiation:</strong><p id="2a812c61-5f17-80d5-9a2f-f6ebe02213ed" class="">Sender cannot deny sending a message.</p><p id="2a812c61-5f17-80f1-8beb-f9f64d68dc4a" class="">→ Example: Digital signatures.</p></li></ol><hr id="2a812c61-5f17-8022-b03a-d026d9cfde53"/><h3 id="2a812c61-5f17-80dc-9fe3-eeeb1d77d3c9" class=""><strong>3. Threats and Vulnerabilities</strong></h3><ul id="2a812c61-5f17-8006-992f-cc55e394a8fb" class="bulleted-list"><li style="list-style-type:disc"><strong>Threat:</strong> Any potential danger that can exploit a weakness.<p id="2a812c61-5f17-8068-8c75-eaeb092df0c2" class="">→ Example: Hacker, malware, phishing.</p></li></ul><ul id="2a812c61-5f17-8025-83b2-f52d75bd7083" class="bulleted-list"><li style="list-style-type:disc"><strong>Vulnerability:</strong> A weakness in system design or implementation.<p id="2a812c61-5f17-80b2-a3e6-d13b58e4e907" class="">→ Example: Weak password, unpatched software.</p></li></ul><ul id="2a812c61-5f17-803f-87e3-e079bcbcd137" class="bulleted-list"><li style="list-style-type:disc"><strong>Risk:</strong> Probability of threat exploiting a vulnerability.</li></ul><hr id="2a812c61-5f17-80c6-921d-ea6710e12b54"/><h3 id="2a812c61-5f17-8024-a2aa-d7567f79d69a" class=""><strong>4. Types of Attacks</strong></h3><table id="2a812c61-5f17-800f-b69f-da2e63f81908" class="simple-table"><thead class="simple-table-header"><tr id="2a812c61-5f17-80f6-a366-e7fd3faa4b36"><th id="wghy" class="simple-table-header-color simple-table-header">Type</th><th id="Xv&lt;c" class="simple-table-header-color simple-table-header">Description</th><th id="JVTM" class="simple-table-header-color simple-table-header">Example</th></tr></thead><tbody><tr id="2a812c61-5f17-8023-8b19-f20fd30c6d3c"><td id="wghy" class=""><strong>Passive Attack</strong></td><td id="Xv&lt;c" class="">Eavesdropping on communication</td><td id="JVTM" class="">Packet sniffing</td></tr><tr id="2a812c61-5f17-8034-9706-cb18c9826d7d"><td id="wghy" class=""><strong>Active Attack</strong></td><td id="Xv&lt;c" class="">Modifying or disrupting data</td><td id="JVTM" class="">DoS attack</td></tr><tr id="2a812c61-5f17-80f5-a456-eaf63c55b535"><td id="wghy" class=""><strong>Denial of Service (DoS)</strong></td><td id="Xv&lt;c" class="">Overloading a system to make it unavailable</td><td id="JVTM" class="">Flooding server</td></tr><tr id="2a812c61-5f17-80c1-9cbd-fd84f653f3b7"><td id="wghy" class=""><strong>Phishing</strong></td><td id="Xv&lt;c" class="">Fake emails/websites to steal credentials</td><td id="JVTM" class="">Fake login page</td></tr><tr id="2a812c61-5f17-804b-98aa-dee953d2fa3b"><td id="wghy" class=""><strong>Man-in-the-Middle (MITM)</strong></td><td id="Xv&lt;c" class="">Intercepting communication between two parties</td><td id="JVTM" class="">Wi-Fi hijacking</td></tr><tr id="2a812c61-5f17-8067-819b-f2358707353c"><td id="wghy" class=""><strong>Spoofing</strong></td><td id="Xv&lt;c" class="">Pretending to be another device or user</td><td id="JVTM" class="">IP/MAC spoofing</td></tr><tr id="2a812c61-5f17-8013-9242-d783a939c537"><td id="wghy" class=""><strong>Ransomware / Malware</strong></td><td id="Xv&lt;c" class="">Harmful software demanding money</td><td id="JVTM" class="">WannaCry virus</td></tr><tr id="2a812c61-5f17-80fa-824a-eea870045298"><td id="wghy" class=""><strong>SQL Injection</strong></td><td id="Xv&lt;c" class="">Inserting malicious queries in web apps</td><td id="JVTM" class="">Stealing DB info</td></tr></tbody></table><hr id="2a812c61-5f17-802d-8729-e8c7f5512e19"/><h3 id="2a812c61-5f17-808d-a758-f3fdba035591" class=""><strong>5. OSI Security Architecture</strong></h3><ul id="2a812c61-5f17-8037-8bbe-d32649ded477" class="bulleted-list"><li style="list-style-type:disc">Defines how to apply security across the 7 OSI layers.</li></ul><ul id="2a812c61-5f17-80d6-832e-c09abcb237d5" class="bulleted-list"><li style="list-style-type:disc">Includes <strong>security attacks</strong>, <strong>security mechanisms</strong>, and <strong>security services</strong>.</li></ul><p id="2a812c61-5f17-801f-a129-e14dd39d8c38" class=""><strong>Security Services:</strong></p><ol type="1" id="2a812c61-5f17-80cf-a2af-ee6aed519e17" class="numbered-list" start="1"><li>Authentication</li></ol><ol type="1" id="2a812c61-5f17-8068-bc2d-d4356c72dec0" class="numbered-list" start="2"><li>Access control</li></ol><ol type="1" id="2a812c61-5f17-8005-a8bf-c69ad58a5c2e" class="numbered-list" start="3"><li>Data confidentiality</li></ol><ol type="1" id="2a812c61-5f17-809f-a9e1-d4b87b5a8016" class="numbered-list" start="4"><li>Data integrity</li></ol><ol type="1" id="2a812c61-5f17-8005-88cf-d4696d4708d5" class="numbered-list" start="5"><li>Non-repudiation</li></ol><p id="2a812c61-5f17-80fd-b98c-e86e3ca07d06" class=""><strong>Security Mechanisms:</strong></p><ul id="2a812c61-5f17-80db-aa30-cdcdb1f7827c" class="bulleted-list"><li style="list-style-type:disc">Encryption, Digital Signature, Authentication protocols, Firewalls, IDS, Hashing.</li></ul><hr id="2a812c61-5f17-80c5-9e3b-f095308b8d75"/><h3 id="2a812c61-5f17-808f-8d1f-e320aa17adba" class=""><strong>6. Security Policies and Mechanisms</strong></h3><ul id="2a812c61-5f17-8041-bfad-e6f699d47270" class="bulleted-list"><li style="list-style-type:disc"><strong>Security Policy:</strong><p id="2a812c61-5f17-806a-af63-ce7267b84d6c" class="">A set of rules defining <strong>what is allowed or not allowed</strong> in a network.</p><p id="2a812c61-5f17-80be-a1b3-d6e058b886c6" class="">→ Example: “Employees must not share passwords.”</p></li></ul><ul id="2a812c61-5f17-8075-a149-f62ddcb61a91" class="bulleted-list"><li style="list-style-type:disc"><strong>Security Mechanism:</strong><p id="2a812c61-5f17-80b6-9d86-e34b42158c62" class="">The method or tool to <strong>enforce</strong> the policy.</p><p id="2a812c61-5f17-801f-a5a0-f3502f3118cf" class="">→ Example: Password hashing, Firewall, IDS, Access Control Lists.</p></li></ul><hr id="2a812c61-5f17-8014-b3f9-c01d1a02ed16"/><h3 id="2a812c61-5f17-80e8-8274-e2fd6c220cd9" class=""><strong>7. Symmetric and Asymmetric Cryptography</strong></h3><h3 id="2a812c61-5f17-8009-9b26-f71965d56ac9" class=""><strong>a) Symmetric Key Cryptography</strong></h3><ul id="2a812c61-5f17-8038-8c77-c40278b4473b" class="bulleted-list"><li style="list-style-type:disc">Same key used for <strong>encryption and decryption</strong>.</li></ul><ul id="2a812c61-5f17-8035-b940-e17ee8941d4a" class="bulleted-list"><li style="list-style-type:disc"><strong>Fast but less secure</strong> (key sharing problem).</li></ul><ul id="2a812c61-5f17-809f-b11a-ebf9c6c689e6" class="bulleted-list"><li style="list-style-type:disc"><strong>Examples:</strong> AES, DES, Blowfish.</li></ul><ul id="2a812c61-5f17-80fc-ad2b-fbb7b9ab9a05" class="bulleted-list"><li style="list-style-type:disc"><strong>Used in:</strong> Data encryption, secure channels.</li></ul><h3 id="2a812c61-5f17-80cb-9ca0-e6d9fa250f3d" class=""><strong>b) Asymmetric Key Cryptography</strong></h3><ul id="2a812c61-5f17-80d1-bfe2-c4ec65e4ed44" class="bulleted-list"><li style="list-style-type:disc">Uses <strong>public key for encryption</strong> and <strong>private key for decryption</strong>.</li></ul><ul id="2a812c61-5f17-8006-bd35-eca3e4498761" class="bulleted-list"><li style="list-style-type:disc"><strong>Slower but more secure</strong> (no key sharing).</li></ul><ul id="2a812c61-5f17-809f-a92d-fdb6c8b54f42" class="bulleted-list"><li style="list-style-type:disc"><strong>Examples:</strong> RSA, ECC, Diffie–Hellman.</li></ul><ul id="2a812c61-5f17-80c5-94ca-de204d4afd07" class="bulleted-list"><li style="list-style-type:disc"><strong>Used in:</strong> Digital signatures, SSL/TLS, HTTPS.</li></ul><hr id="2a812c61-5f17-8060-b72b-c16c21c55abc"/><h3 id="2a812c61-5f17-8027-b431-fc97585555ed" class=""><strong>8. Security in Network, Transport, and Application Layers</strong></h3><table id="2a812c61-5f17-80c4-9423-f42b8c7d1097" class="simple-table"><thead class="simple-table-header"><tr id="2a812c61-5f17-801c-990a-e01aa1272caf"><th id="UcQd" class="simple-table-header-color simple-table-header">Layer</th><th id=":IYC" class="simple-table-header-color simple-table-header">Example</th><th id="{b~}" class="simple-table-header-color simple-table-header">Security Method</th></tr></thead><tbody><tr id="2a812c61-5f17-8089-a6b2-dcc0a7ee0c67"><td id="UcQd" class=""><strong>Network Layer</strong></td><td id=":IYC" class="">IP packets</td><td id="{b~}" class="">IPsec</td></tr><tr id="2a812c61-5f17-8002-ae3c-dae88182e517"><td id="UcQd" class=""><strong>Transport Layer</strong></td><td id=":IYC" class="">TCP connections</td><td id="{b~}" class="">SSL / TLS</td></tr><tr id="2a812c61-5f17-801c-8403-eff343b86e33"><td id="UcQd" class=""><strong>Application Layer</strong></td><td id=":IYC" class="">Web, Email, FTP</td><td id="{b~}" class="">HTTPS, S/MIME, SSH</td></tr></tbody></table><hr id="2a812c61-5f17-802e-bf87-ea52a072a4c2"/><h3 id="2a812c61-5f17-8016-9b47-dde1070235a9" class=""><strong>9. IPsec (Internet Protocol Security)</strong></h3><ul id="2a812c61-5f17-8024-8987-f1c0ddd33385" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition:</strong> Framework to secure IP communication by <strong>authenticating and encrypting</strong> packets at the <strong>Network Layer</strong>.</li></ul><ul id="2a812c61-5f17-80a4-89cf-eda0f998c82b" class="bulleted-list"><li style="list-style-type:disc"><strong>Components:</strong><ol type="1" id="2a812c61-5f17-8031-ba91-d50b22794161" class="numbered-list" start="1"><li><strong>AH (Authentication Header):</strong> Ensures integrity and authentication.</li></ol><ol type="1" id="2a812c61-5f17-80af-8df3-f98dc833e95d" class="numbered-list" start="2"><li><strong>ESP (Encapsulating Security Payload):</strong> Ensures confidentiality and integrity.</li></ol></li></ul><ul id="2a812c61-5f17-80df-a2c1-c061dce526d5" class="bulleted-list"><li style="list-style-type:disc"><strong>Used in:</strong> VPNs (Virtual Private Networks).</li></ul><hr id="2a812c61-5f17-8092-bf23-e2e4ec3d2312"/><h3 id="2a812c61-5f17-804f-9b47-f31ecd795ebb" class=""><strong>10. HTTPS (HyperText Transfer Protocol Secure)</strong></h3><ul id="2a812c61-5f17-80d7-9b5d-e367bfd1055b" class="bulleted-list"><li style="list-style-type:disc"><strong>Secure version of HTTP</strong> that uses <strong>SSL/TLS encryption</strong>.</li></ul><ul id="2a812c61-5f17-80f8-a385-fb6a146d7741" class="bulleted-list"><li style="list-style-type:disc">Ensures:<ul id="2a812c61-5f17-803e-be9f-d8cace9c6c09" class="bulleted-list"><li style="list-style-type:circle">Confidentiality (data encrypted)</li></ul><ul id="2a812c61-5f17-8077-ac70-fe3734c031ce" class="bulleted-list"><li style="list-style-type:circle">Integrity (data not changed)</li></ul><ul id="2a812c61-5f17-8014-8af8-e0b3a9691f33" class="bulleted-list"><li style="list-style-type:circle">Authentication (valid server)</li></ul></li></ul><ul id="2a812c61-5f17-80c8-9353-ddafda75da94" class="bulleted-list"><li style="list-style-type:disc"><strong>Port:</strong> 443</li></ul><ul id="2a812c61-5f17-8007-ac76-f7ab8795563d" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> Used in all secure websites (padlock icon 🔒).</li></ul><hr id="2a812c61-5f17-80b1-800d-e4dc0197a983"/><h3 id="2a812c61-5f17-803c-ab7e-db75a071a80a" class=""><strong>11. SSL / TLS (Secure Sockets Layer / Transport Layer Security)</strong></h3><ul id="2a812c61-5f17-80a6-a70e-c075bf063535" class="bulleted-list"><li style="list-style-type:disc">Protocol for <strong>securing data in transit</strong> between client and server.</li></ul><ul id="2a812c61-5f17-809f-8856-f1fe7917e05d" class="bulleted-list"><li style="list-style-type:disc">Works at <strong>Transport Layer</strong> (above TCP).</li></ul><ul id="2a812c61-5f17-80df-b9a8-d617de9e0098" class="bulleted-list"><li style="list-style-type:disc">Uses <strong>public key cryptography</strong> for key exchange and symmetric keys for data encryption.</li></ul><ul id="2a812c61-5f17-8000-b1ac-c587c3828d35" class="bulleted-list"><li style="list-style-type:disc"><strong>TLS</strong> is the improved, modern version of SSL.</li></ul><ul id="2a812c61-5f17-802f-aa72-ce8943a385da" class="bulleted-list"><li style="list-style-type:disc"><strong>Steps:</strong><ol type="1" id="2a812c61-5f17-809d-84ca-cfb4b105d48f" class="numbered-list" start="1"><li>Handshake (key exchange)</li></ol><ol type="1" id="2a812c61-5f17-8092-80be-f1d543141e52" class="numbered-list" start="2"><li>Session encryption</li></ol><ol type="1" id="2a812c61-5f17-80c8-81f9-da8e04ac31d1" class="numbered-list" start="3"><li>Secure communication</li></ol></li></ul><hr id="2a812c61-5f17-80cc-82bf-c638fd57fa06"/><h3 id="2a812c61-5f17-8097-93de-f98a8e9c2bd8" class=""><strong>12. IDS (Intrusion Detection System)</strong></h3><ul id="2a812c61-5f17-80c7-ba11-fd23288a714d" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition:</strong> Monitors network traffic for suspicious activity or known attacks.</li></ul><ul id="2a812c61-5f17-80aa-9716-d7233e9af22c" class="bulleted-list"><li style="list-style-type:disc"><strong>Types:</strong><ol type="1" id="2a812c61-5f17-808f-a1f2-dfb6e0aad82a" class="numbered-list" start="1"><li><strong>Network-based IDS (NIDS):</strong> Monitors entire network.</li></ol><ol type="1" id="2a812c61-5f17-8074-b1ad-cf6bbdd8ccc6" class="numbered-list" start="2"><li><strong>Host-based IDS (HIDS):</strong> Monitors one machine.</li></ol></li></ul><ul id="2a812c61-5f17-803d-9ba3-fc2f60447441" class="bulleted-list"><li style="list-style-type:disc"><strong>Functions:</strong> Detect, alert, and log — <strong>does not block</strong>.</li></ul><ul id="2a812c61-5f17-80f2-9ef7-c51494c52263" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> Snort.</li></ul><hr id="2a812c61-5f17-8052-b62d-fd720f1736b5"/><h3 id="2a812c61-5f17-8032-813e-c2eb7c8caa08" class=""><strong>13. Firewall</strong></h3><ul id="2a812c61-5f17-808c-8f34-d317f2dfc67b" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition:</strong> Network security device/software that <strong>filters incoming and outgoing traffic</strong> based on predefined rules.</li></ul><ul id="2a812c61-5f17-803f-89a3-d7d26056dbbb" class="bulleted-list"><li style="list-style-type:disc"><strong>Types:</strong><ol type="1" id="2a812c61-5f17-80b1-84bd-cfb6829aa376" class="numbered-list" start="1"><li><strong>Packet Filtering Firewall:</strong> Checks headers only.</li></ol><ol type="1" id="2a812c61-5f17-80b5-a6ca-c53ebd15f3b2" class="numbered-list" start="2"><li><strong>Stateful Firewall:</strong> Tracks active connections.</li></ol><ol type="1" id="2a812c61-5f17-80c1-b716-cb737985914d" class="numbered-list" start="3"><li><strong>Proxy Firewall:</strong> Acts as an intermediary.</li></ol><ol type="1" id="2a812c61-5f17-806b-a3c1-de00004f586d" class="numbered-list" start="4"><li><strong>Next-Gen Firewall (NGFW):</strong> Uses deep packet inspection + IDS/IPS features.</li></ol></li></ul><ul id="2a812c61-5f17-80f5-bc60-f8f00c2801f4" class="bulleted-list"><li style="list-style-type:disc"><strong>Purpose:</strong> Prevent unauthorized access to/from network.</li></ul><hr id="2a812c61-5f17-8076-a957-e1c5f2e00607"/><h3 id="2a812c61-5f17-80fa-8db9-c0bd628eb3ac" class="">✅ <strong>Summary Table</strong></h3><table id="2a812c61-5f17-800a-8aa8-e7d47b0405b9" class="simple-table"><thead class="simple-table-header"><tr id="2a812c61-5f17-8066-ad72-f726dd3d971a"><th id="Pq_&gt;" class="simple-table-header-color simple-table-header">Concept</th><th id="oy=F" class="simple-table-header-color simple-table-header">Function</th><th id="J;Tx" class="simple-table-header-color simple-table-header">Example / Protocol</th></tr></thead><tbody><tr id="2a812c61-5f17-8064-91d8-dd871c7a8852"><td id="Pq_&gt;" class="">Network Security</td><td id="oy=F" class="">Protect data &amp; systems</td><td id="J;Tx" class="">Firewalls, encryption</td></tr><tr id="2a812c61-5f17-806a-9f4f-c4982937e128"><td id="Pq_&gt;" class="">CIA Triad</td><td id="oy=F" class="">Core security goals</td><td id="J;Tx" class="">Confidentiality, Integrity, Availability</td></tr><tr id="2a812c61-5f17-8085-8530-c19f786c5954"><td id="Pq_&gt;" class="">Threats</td><td id="oy=F" class="">Dangers to security</td><td id="J;Tx" class="">Phishing, Malware</td></tr><tr id="2a812c61-5f17-8091-9eb8-eabeddcf665e"><td id="Pq_&gt;" class="">Vulnerabilities</td><td id="oy=F" class="">Weaknesses</td><td id="J;Tx" class="">Unpatched OS</td></tr><tr id="2a812c61-5f17-809d-a794-e82bec3080ed"><td id="Pq_&gt;" class="">Symmetric Key</td><td id="oy=F" class="">Same key used</td><td id="J;Tx" class="">AES, DES</td></tr><tr id="2a812c61-5f17-8004-aa00-c01f9217d2d2"><td id="Pq_&gt;" class="">Asymmetric Key</td><td id="oy=F" class="">Public/Private keys</td><td id="J;Tx" class="">RSA</td></tr><tr id="2a812c61-5f17-8028-96ce-cf7396301b74"><td id="Pq_&gt;" class="">IPsec</td><td id="oy=F" class="">Secures IP packets</td><td id="J;Tx" class="">VPN</td></tr><tr id="2a812c61-5f17-80be-831d-d1c52abb6cb0"><td id="Pq_&gt;" class="">SSL/TLS</td><td id="oy=F" class="">Secure communication</td><td id="J;Tx" class="">HTTPS</td></tr><tr id="2a812c61-5f17-80a6-a07c-f2ffaebb5ddd"><td id="Pq_&gt;" class="">IDS</td><td id="oy=F" class="">Detects intrusion</td><td id="J;Tx" class="">Snort</td></tr><tr id="2a812c61-5f17-802d-975b-edeb090c91ff"><td id="Pq_&gt;" class="">Firewall</td><td id="oy=F" class="">Blocks unauthorized access</td><td id="J;Tx" class="">Cisco ASA</td></tr></tbody></table><hr id="2a812c61-5f17-807d-9112-e4c2effb5075"/><h3 id="2a812c61-5f17-80aa-88a4-f7bcb837b110" class="">💡 <strong>Oral Tips</strong></h3><ul id="2a812c61-5f17-8088-aded-c0221b2c455d" class="bulleted-list"><li style="list-style-type:disc">Always connect <strong>theory + example</strong>:<ul id="2a812c61-5f17-8038-85c4-d9e7f6e61e46" class="bulleted-list"><li style="list-style-type:circle">“Firewall filters traffic to protect the network.”</li></ul><ul id="2a812c61-5f17-805a-b320-cea3178a24de" class="bulleted-list"><li style="list-style-type:circle">“HTTPS is HTTP + SSL/TLS.”</li></ul></li></ul><ul id="2a812c61-5f17-80bd-b87c-f37dfa7d4433" class="bulleted-list"><li style="list-style-type:disc">Remember:<ul id="2a812c61-5f17-801a-956a-ff3a15078451" class="bulleted-list"><li style="list-style-type:circle"><strong>Symmetric → One key (fast)</strong></li></ul><ul id="2a812c61-5f17-8013-a424-f660447b6468" class="bulleted-list"><li style="list-style-type:circle"><strong>Asymmetric → Two keys (secure)</strong></li></ul></li></ul><ul id="2a812c61-5f17-8069-8abf-da608aa19335" class="bulleted-list"><li style="list-style-type:disc">Mention <strong>CIA triad</strong> first if the question is open-ended.</li></ul><ul id="2a812c61-5f17-803e-b339-eb0a184b45f2" class="bulleted-list"><li style="list-style-type:disc">For attacks, classify as <strong>Passive</strong> (listen) or <strong>Active</strong> (modify).</li></ul><hr id="2a812c61-5f17-80bc-9188-c7a3b51749ed"/><p id="2a812c61-5f17-80b9-a867-ebb20506e92b" class="">Would you like me to make a <strong>one-page last-minute revision sheet</strong> — with all these points in a short “keyword + example” format (perfect to glance before viva)?</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
