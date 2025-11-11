@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>spos oral question</title>
+  <link rel="manifest" href="manifest.json" />
+
   <style>
     :root {
       --bg: #f8f9fa;
@@ -275,6 +277,18 @@
     </ul>
   </div>
   <a href="./ExportBlock-02b03cca-0eaa-46d1-a598-aabdc9af9ce6-Part-1/CNS 2a812c615f178098bca6cdb9bf541f76.html">.</a>
+  <script src="sw.js"></script>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./sw.js").then(
+        () => console.log("Service Worker registered successfully."),
+        err => console.log("Service Worker registration failed:", err)
+      );
+    });
+  }
+</script>
+
 
 </body>
 </html>
