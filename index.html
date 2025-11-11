@@ -281,14 +281,13 @@
   <script>
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
-      navigator.serviceWorker.register("./sw.js").then(
+      navigator.serviceWorker.register("/sw.js").then(
         () => console.log("Service Worker registered successfully."),
         err => console.log("Service Worker registration failed:", err)
       );
     });
   }
-</script>
-
+  </script>
 
 </body>
 </html>
