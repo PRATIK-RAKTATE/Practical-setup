@@ -712,4 +712,29 @@ blockquote.quote-large {
 </p><figure id="2b312c61-5f17-803b-ad82-c2d858951d13" class="block-color-blue link-to-page"><a href="U4%20-%20Database%20Transaction%20Management%202b312c615f17803bad82c2d858951d13.html">U4 - Database Transaction Management</a></figure><p id="2b312c61-5f17-8033-9931-f23f58623769" class="">
 </p><figure id="2b312c61-5f17-80a2-a0cc-df2837aa7b5a" class="block-color-blue link-to-page"><a href="U5%20-%20NoSQL%20Databases%202b312c615f1780a2a0ccdf2837aa7b5a.html">U5 - NoSQL Databases</a></figure><p id="2b312c61-5f17-800c-a304-cc9227002121" class="">
 </p><figure id="2b312c61-5f17-80eb-8ca4-fe9cf2bc44ef" class="block-color-blue link-to-page"><a href="U6%20-%20Advances%20in%20Database%202b312c615f1780eb8ca4fe9cf2bc44ef.html">U6 - Advances in Database</a></figure><p id="2b312c61-5f17-80bd-b945-d17322620715" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+
+<script>
+	async function clearOldCaches() {
+  // 1. Remove old SW caches
+  if ('caches' in window) {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => caches.delete(k)));
+  }
+
+  // 2. Unregister service workers
+  if ('serviceWorker' in navigator) {
+    const regs = await navigator.serviceWorker.getRegistrations();
+    for (const reg of regs) {
+      await reg.unregister();
+    }
+  }
+
+  // 3. Force reload from server
+  window.location.reload(true);
+}
+
+clearOldCaches();
+
+</script>
+</body></html>
